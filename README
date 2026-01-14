@@ -1,0 +1,50 @@
+Problem: The Valid Anagram
+
+Description:
+
+Write a function to determine if two provided strings are anagrams of each other.
+
+An anagram is a word or phrase formed by rearranging the letters of a different word or phrase, typically using all the original letters exactly once.
+
+Examples:
+
+Input: s = "listen", t = "silent" -> Output: True
+
+Input: s = "rat", t = "car" -> Output: False
+
+Requirements:
+
+Preferred language(Java, Javascript, Typescript , C, C++)
+
+Briefly explain your logic/approach.
+
+State the Time Complexity and Space Complexity of your solution.
+
+
+
+
+
+
+Explanation of Code:
+
+count[26] keeps track of the frequency of lowercase letters 'a' to 'z'.
+
+Increment for each character in s.
+
+Decrement for each character in t.
+
+If any count becomes negative, t has extra characters → return false.
+
+If loop finishes without returning false, they are anagrams → return true.
+
+Time and Space Complexity:
+
+Time Complexity:
+
+O(n), where n is the length of the strings (single pass for counting and decrementing).
+
+Space Complexity:
+
+O(1) → We use a fixed-size array of 26 integers, independent of input size.
+
+Note: If strings contain all ASCII characters, use int count[128] instead.
